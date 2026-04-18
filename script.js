@@ -1,8 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const year = new Date().getFullYear();
-  const footer = document.querySelector(".site-footer p");
+document.addEventListener('DOMContentLoaded', () => {
+  const yearNode = document.querySelector('.footer-year');
 
-  if (footer) {
-    footer.textContent = `© ${year} 我的博客. Built with plain HTML, CSS and JavaScript.`;
+  if (yearNode) {
+    yearNode.textContent = `© ${new Date().getFullYear()} 许鹤腾. All rights reserved.`;
   }
 });

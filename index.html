@@ -3,89 +3,221 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>我的博客</title>
+    <title>许鹤腾 · Personal Blog</title>
     <meta
       name="description"
-      content="一个简洁的个人博客骨架，用来展示自我介绍、文章与联系方式。"
+      content="许鹤腾的个人博客与作品主页，记录产品、技术、实验和持续构建中的想法。"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="page-glow page-glow-left"></div>
+    <div class="page-glow page-glow-right"></div>
+
     <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="#top">我的博客</a>
-        <nav>
-          <a href="#about">关于</a>
-          <a href="#posts">文章</a>
-          <a href="#contact">联系</a>
+      <div class="container nav-shell">
+        <a class="brand" href="#top">
+          <span class="brand-mark">HX</span>
+          <span>许鹤腾</span>
+        </a>
+
+        <nav class="nav-links" aria-label="主导航">
+          <a href="#about">About</a>
+          <a href="#writing">Writing</a>
+          <a href="#builds">Builds</a>
+          <a href="#contact">Contact</a>
         </nav>
+
+        <a class="nav-cta" href="https://github.com/xuhetengxx-cyber" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
       </div>
     </header>
 
     <main id="top">
       <section class="hero container">
-        <p class="eyebrow">Hello there</p>
-        <h1>欢迎来到我的个人博客</h1>
-        <p class="hero-copy">
-          这里可以放你的简介、项目经历、随笔和技术文章。这个骨架先保持极简，方便你后续继续扩展。
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#posts">查看文章</a>
-          <a class="button" href="#contact">联系我</a>
+        <div class="hero-copy">
+          <p class="eyebrow">PERSONAL BLOG · BUILDING IN PUBLIC</p>
+          <h1>把产品思考、技术实验与长期项目，整理成可持续生长的个人站点。</h1>
+          <p class="lede">
+            这是一个面向长期写作的个人主页：既可以展示你是谁，也可以持续沉淀文章、项目、学习记录与公开实验。
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#writing">查看文章精选</a>
+            <a class="button secondary" href="#contact">联系我</a>
+          </div>
+
+          <ul class="hero-metrics" aria-label="站点亮点">
+            <li>
+              <span class="metric-number">03</span>
+              <span class="metric-label">精选文章模块</span>
+            </li>
+            <li>
+              <span class="metric-number">24/7</span>
+              <span class="metric-label">GitHub Pages 部署</span>
+            </li>
+            <li>
+              <span class="metric-number">∞</span>
+              <span class="metric-label">后续扩展空间</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-panel">
+          <div class="panel-topline">
+            <span class="badge badge-success">LIVE</span>
+            <span class="mini-label">Personal publishing system</span>
+          </div>
+
+          <div class="hero-card hero-card-primary">
+            <p class="card-kicker">Writing Engine</p>
+            <h2>一个站点，承载个人介绍、文章归档、项目更新与公开实验。</h2>
+            <p>
+              先从静态页面开始，后续可以平滑升级到 Markdown、CMS、RSS、评论系统或更完整的前端框架。
+            </p>
+          </div>
+
+          <div class="hero-grid">
+            <article class="hero-card">
+              <p class="card-kicker">Focus</p>
+              <h3>产品 × 技术 × 叙事</h3>
+              <p>适合把项目、随笔、学习笔记和 build log 统一到一个品牌化页面里。</p>
+            </article>
+            <article class="hero-card">
+              <p class="card-kicker">Stack</p>
+              <h3>Plain HTML / CSS / JS</h3>
+              <p>目前保持轻量，页面首屏快，后面迁移到 Next.js / Astro 也非常容易。</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="about" class="section container">
-        <h2>关于我</h2>
-        <p>
-          你可以把这里替换成个人介绍，比如你的背景、兴趣方向、正在做的项目，或者一句代表自己的话。
-        </p>
-      </section>
-
-      <section id="posts" class="section container">
-        <div class="section-heading">
-          <h2>最新文章</h2>
-          <p>先放 3 篇占位文章，后面可以接入 Markdown、CMS 或静态站点生成器。</p>
+      <section id="about" class="section container split-section">
+        <div class="section-intro">
+          <p class="section-tag">About</p>
+          <h2>把“我是谁”和“我在构建什么”同时讲清楚。</h2>
         </div>
 
-        <div class="post-grid">
-          <article class="card">
-            <p class="post-date">2026-04-18</p>
-            <h3>第一篇博客文章</h3>
-            <p>介绍你为什么开始写博客，以及你想长期记录什么内容。</p>
-            <a href="#">阅读更多 →</a>
+        <div class="about-grid">
+          <article class="feature-card">
+            <p class="card-kicker">Positioning</p>
+            <h3>个人品牌首页</h3>
+            <p>适合放一句清晰的自我定位、当前关注领域，以及想让访客第一眼记住的信息。</p>
           </article>
-
-          <article class="card">
-            <p class="post-date">2026-04-18</p>
-            <h3>我的项目清单</h3>
-            <p>把近期在做的项目、实验或想法整理成一篇导航文章。</p>
-            <a href="#">阅读更多 →</a>
+          <article class="feature-card">
+            <p class="card-kicker">Projects</p>
+            <h3>项目与实验归档</h3>
+            <p>你可以把博客写作和项目进度放在同一个入口里，让这个站点不仅是主页，也是作品集。</p>
           </article>
-
-          <article class="card">
-            <p class="post-date">2026-04-18</p>
-            <h3>学习笔记模板</h3>
-            <p>用一个固定结构记录读书、技术学习或产品思考，方便持续更新。</p>
-            <a href="#">阅读更多 →</a>
+          <article class="feature-card">
+            <p class="card-kicker">Publishing</p>
+            <h3>持续输出空间</h3>
+            <p>无论是产品思考、开发日志、AI 工具实践，还是个人随笔，都可以自然扩容进去。</p>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="section container contact">
-        <h2>联系我</h2>
-        <p>你可以在这里放邮箱、GitHub、社交媒体链接，或者一个联系表单。</p>
-        <ul>
-          <li>邮箱：your-email@example.com</li>
-          <li>GitHub：github.com/xuhetengxx-cyber</li>
-          <li>一句话状态：Building in public.</li>
-        </ul>
+      <section id="writing" class="section section-band">
+        <div class="container">
+          <div class="section-intro section-intro-light">
+            <p class="section-tag">Selected Writing</p>
+            <h2>先做一个能打的首页，再慢慢长出内容系统。</h2>
+            <p>
+              下面这几个卡片先作为占位文章。你后面可以继续扩展成文章详情页、标签页、归档页，或者直接接 Markdown。
+            </p>
+          </div>
+
+          <div class="post-grid">
+            <article class="post-card post-card-featured">
+              <p class="post-date">2026-04-18 · Featured</p>
+              <h3>为什么要做一个能持续更新的个人博客</h3>
+              <p>
+                从一次性的个人主页，升级成长期记录产品、技术和项目演化过程的公开空间。
+              </p>
+              <a href="#">阅读全文</a>
+            </article>
+
+            <article class="post-card">
+              <p class="post-date">2026-04-18</p>
+              <h3>我的产品与技术项目路线图</h3>
+              <p>把正在做的事情结构化，让别人知道你在探索什么，也方便自己持续迭代。</p>
+              <a href="#">阅读全文</a>
+            </article>
+
+            <article class="post-card">
+              <p class="post-date">2026-04-18</p>
+              <h3>学习笔记应该如何公开输出</h3>
+              <p>把零散输入变成可以复用、可以分享、也更容易被未来的自己检索到的内容。</p>
+              <a href="#">阅读全文</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="builds" class="section container builds-section">
+        <div class="section-intro">
+          <p class="section-tag">Builds</p>
+          <h2>把站点当成一个持续迭代的产品来做。</h2>
+        </div>
+
+        <div class="timeline-grid">
+          <article class="timeline-card">
+            <span class="timeline-step">01</span>
+            <h3>品牌化首页</h3>
+            <p>先把首页做到足够清晰、足够高级，让第一印象建立起来。</p>
+          </article>
+          <article class="timeline-card">
+            <span class="timeline-step">02</span>
+            <h3>内容系统</h3>
+            <p>增加文章详情页、归档、标签、系列文章和更稳定的内容组织方式。</p>
+          </article>
+          <article class="timeline-card">
+            <span class="timeline-step">03</span>
+            <h3>自动化发布</h3>
+            <p>用 GitHub Pages 自动部署，之后每次 push 都能更新线上站点。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section container contact-shell">
+        <div>
+          <p class="section-tag">Contact</p>
+          <h2>准备好把这个页面改成你的真实名片。</h2>
+          <p class="contact-copy">
+            你可以把邮箱、社交链接、个人简介、头像和项目入口全部替换成真实信息。这个版本先把视觉与发布链路搭起来。
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <p class="card-kicker">Current Links</p>
+          <ul class="contact-list">
+            <li><span>GitHub</span><a href="https://github.com/xuhetengxx-cyber" target="_blank" rel="noreferrer">xuhetengxx-cyber</a></li>
+            <li><span>Email</span><a href="mailto:your-email@example.com">your-email@example.com</a></li>
+            <li><span>Status</span><strong>Building in public.</strong></li>
+          </ul>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© 2026 我的博客. Built with plain HTML, CSS and JavaScript.</p>
+      <div class="container footer-shell">
+        <p class="footer-title">许鹤腾 · Personal Blog</p>
+        <p class="footer-meta">Static site, custom design, GitHub Pages deployment.</p>
+        <p class="footer-year">© 2026 许鹤腾. All rights reserved.</p>
       </div>
     </footer>
 
